@@ -19,6 +19,20 @@
   }
 }
 
+/* @font-face {
+  font-family: "gothic";
+  src: url('/fonts/centurygothic.ttf') format('truetype');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "gothic";
+  src: url('/fonts/centurygothic_bold.ttf') format('truetype');
+  font-weight: normal;
+  font-display: swap;
+} */
+
 body {
   background: var(--background);
   color: var(--foreground);
