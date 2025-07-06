@@ -18,16 +18,16 @@ export default function Home() {
     <>
     <div className="relative h-screen w-screen"> 
       <img src="erebo.svg" className="absolute inset-0 w-full h-full object-cover"alt="Background Image" />
-      <div className="absolute top-0 translate-y-1/8 flex flex-col items-center justify-start gap-8 ">
+      <div className="absolute top-0 translate-y-1/16 flex flex-col items-center justify-start gap-8 ">
         <img src="logo.png" className="object-cover w-[75%] max-w-4xl p-5 z-15" alt="Logo" />
         <div className="flex flex-col items-left justify-center w-screen mt-[10vh] bg-white ">
-          <p className={`font-mono text-black m-5 px-8 w-3/5 max-w-3xl outline outline-gray-300 bg-linear-to-br from-white via-slate-100 to-slate-200 pb-8 shadow-lg text-[clamp(0.75rem,1.5vw,1.25rem)]`}>
+          <p className={`font-mono text-black m-5 px-8 w-3/5 max-w-3xl outline outline-gray-300 bg-linear-to-br from-white via-slate-100 to-slate-200 pb-8 shadow-lg text-[clamp(0.5rem,1.5vw,1.25rem)]`}>
             <br/>
-            <a className={`${floatersFont.className} font-bold text-slate-900 text-3xl`}>Introduction</a> 
+            <a className={`${floatersFont.className} font-bold text-slate-900 text-[clamp(1.25rem,5vw,3rem)]`}>Introduction</a> 
             <br/>
             The Floaters are a group of explorers on a journey to breach the perpetual storm of darkness that shrouds their world. 
             <br/><br/>
-            <a className="text-black/50 hover:text-white hover:bg-slate-400 rounded transition duration-200 outline p-2" href="">
+            <a className="text-black/50 text-[clamp(0.5rem,1.5vw,1.25rem)]  hover:text-white hover:bg-slate-400 rounded transition duration-200 outline p-2" href="">
               Read More →
             </a>
             </p>
@@ -35,13 +35,14 @@ export default function Home() {
           <br/>
           <h2 className={`${gothicFont.className} font-bold text-slate-900  text-[clamp(1.25rem,5vw,10rem)] mx-auto leading-none`}>Worldbuilding</h2>  
           <p className={`text-black mx-auto ${gothicFont.className} text-[clamp(0.5rem,1.4vw,2rem)] text-center p-5 w-3/5`}>
-            A sliver of humanity remains trapped on the <a className="font-bold">Somme</a>, an alien world shrouded by <a className="font-bold">Erebo</a>, a storm of darkness that has raged for as long as anyone can remember.
-            In order to survive, these stranded people shelter within the <a className="font-bold">Haven</a>, a colossal megastructure
-            embedded deep within the planet.
+            A sliver of humanity is trapped on the <a className="font-bold">Somme</a>, an alien world shrouded by a storm of darkness that has raged for longer than anyone can remember.
+            In order to survive on this harsh planet, these stranded people have sheltered within the <a className="font-bold">Haven</a>, a colossal megastructure
+            embedded deep within the surface.
             <br/> <br/>
             <a className="text-black/50 hover:text-white hover:bg-slate-400 rounded transition duration-200 outline p-2" href="">
               Explore →
             </a>
+
           </p>
           <div className="mx-5 grid grid-cols-3 gap-4 px-8 justify-items-center max-w-8xl ">
             <div className="relative z-10 w-full max-w-3xl group">
@@ -67,6 +68,9 @@ export default function Home() {
           <div className="mx-auto">
            <AboutProjectBox gothicFont={gothicFont}/>
           </div>
+              <footer className={`z-12  text-black/50 text-[clamp(0.5rem,1.2vw,1.5rem)] text-center p-5 font-extralight ${gothicFont.className} w-full`}>
+                    © 2025 Benjamin Wang 
+          </footer>
         </div>
       </div>
     </div>
