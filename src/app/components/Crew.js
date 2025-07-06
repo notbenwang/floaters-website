@@ -42,7 +42,7 @@ export default function Crew({font, artFont}) {
     <div className="p-5  [direction:rtl] mx-16"> 
         <div className="grid grid-cols-2 justify-items-center outline outline-gray-300 bg-linear-to-bl from-white via-slate-100 to-slate-400 w-9/8 mx-auto max-w-7xl shadow-xl p-10">
 
-            <div className={`${font.className} text-right`}>
+            <div className={`relative ${font.className} relativetext-right`}>
                 <h1 className={`text-black font-bold text-[clamp(1.25rem,5vw,10rem)] leading-none ${artFont.className}`}>THE CREW</h1>
 
                 {members.map((member, index) => (
@@ -62,7 +62,10 @@ export default function Crew({font, artFont}) {
                 <h4 className="text-gray-300 inline-block text-right text-[clamp(0.25rem,2.0vw,2rem)]">MEMBER 05 •</h4><br/>
                 <h4 className="text-gray-300 inline-block text-right text-[clamp(0.25rem,2.0vw,2rem)]">MEMBER 06 •</h4><br/>
                 <h4 className="text-gray-300 inline-block text-right text-[clamp(0.25rem,2.0vw,2rem)]">MEMBER 07 •</h4><br/>
-     
+                <br/>
+                <a className=" text-black/50 text-[clamp(0.25rem,2.0vw,2rem)] hover:text-white hover:bg-slate-400 rounded transition duration-200 outline p-4" href="">
+                    → Read More 
+                </a>
             </div>
                 <div className="relative w-full max-w-lg aspect-[3/4] bg-linear-to-bl from-slate-100 via-slate-400 to-slate-900 shadow-2xl rounded-xl">
                  <div className={`${font.className} absolute top-[0%] right-[0%] text-right   text-slate-700 

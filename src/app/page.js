@@ -1,6 +1,7 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import Crew from "./components/Crew";
+import AboutProjectBox from "./components/AboutProjectBox";
 
 const gothicFont = localFont({
   src: [
@@ -61,6 +62,11 @@ export default function Home() {
           <Crew font={gothicFont} artFont={floatersFont}/>
           </div>
           <br/>
+          <hr/>
+          <br/>
+          <div className="mx-auto">
+           <AboutProjectBox gothicFont={gothicFont}/>
+          </div>
         </div>
       </div>
     </div>
