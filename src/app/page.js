@@ -56,11 +56,11 @@ export default function Home() {
             <h1 className={`absolute bottom-[50%] opacity-0 group-hover:opacity-100 transition duration-300 text-center w-full text-[clamp(0.5rem,3vw,10rem)] font-bold ${gothicFont.className}`}>The Anomalies</h1>
             </div> 
           </div> 
-          <hr/>
-          <br/>
-          <br/>
-          <Crew font={gothicFont} artFont={floatersFont}/>
 
+          <div className="ml-auto">
+          <Crew font={gothicFont} artFont={floatersFont}/>
+          </div>
+          <br/>
         </div>
       </div>
     </div>

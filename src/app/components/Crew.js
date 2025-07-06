@@ -39,8 +39,8 @@ export default function Crew({font, artFont}) {
         setHoveredOccupation(occupations[index]);
     }
     return (
-    <div className="p-5 [direction:rtl] mx-8"> 
-        <div className="grid grid-cols-2 justify-items-center outline outline-gray-300 bg-linear-to-bl from-white via-slate-100 to-slate-200 w-3/4 mx-auto max-w-6xl shadow-xl p-5">
+    <div className="p-5  [direction:rtl] mx-16"> 
+        <div className="grid grid-cols-2 justify-items-center outline outline-gray-300 bg-linear-to-bl from-white via-slate-100 to-slate-400 w-9/8 mx-auto max-w-7xl shadow-xl p-10">
 
             <div className={`${font.className} text-right`}>
                 <h1 className={`text-black font-bold text-[clamp(1.25rem,5vw,10rem)] leading-none ${artFont.className}`}>THE CREW</h1>
