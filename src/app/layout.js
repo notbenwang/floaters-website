@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 
 export const metadata = {
-  title: "Floaters",
+  title: "Floaters - Home",
   description: "An alien world shrouded in a storm of darkness",
 };
 

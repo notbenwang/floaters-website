@@ -2,9 +2,10 @@
 import React from 'react'
 import { useState } from 'react';
 
-export default function Crew({font}) {
+export default function Crew({font, artFont}) {
     const [hoveredIndex, setHoveredIndex] = useState(null);
-    
+    const [currentMember, setCurrentMember] = useState("Bugi");
+    const [hoveredOccupation, setHoveredOccupation] = useState("Pilot");
     const images = [
         "group04.png",
         "group03.png",
@@ -19,37 +20,67 @@ export default function Crew({font}) {
         "MEMBER 04 •",
     ]
 
-    return (
-        
-    <div className="grid grid-cols-2 justify-items-center outline outline-gray-300 w-[60vw] mr-auto max-w-7xl shadow-xl p-5">
+    const memberNames = [
+        "Celee",
+        "Harp",
+        "Aico",
+        "Bugi",
+    ]
+    const occupations = [
+        "Maid",
+        "Fighter",
+        "Navigator",
+        "Pilot",
+    ]
 
-        <div className={`${font.className} text-lg text-right`}>
-            <h1 className="text-black font-bold text-[clamp(1.25rem,4vw,10rem)]">THE CREW</h1>
-            {members.map((member, index) => (
+    function handleMouseEnter(index) {
+        setHoveredIndex(index);
+        setCurrentMember(memberNames[index]);
+        setHoveredOccupation(occupations[index]);
+    }
+    return (
+    <div className="p-5 [direction:rtl] mx-8"> 
+        <div className="grid grid-cols-2 justify-items-center outline outline-gray-300 bg-linear-to-bl from-white via-slate-100 to-slate-200 w-3/4 mx-auto max-w-6xl shadow-xl p-5">
+
+            <div className={`${font.className} text-right`}>
+                <h1 className={`text-black font-bold text-[clamp(1.25rem,5vw,10rem)] leading-none ${artFont.className}`}>THE CREW</h1>
+
+                {members.map((member, index) => (
                     <div>
-                    <h4 
-                        key={member} 
-                        className={`inline-block text-gray-800 hover:text-black hover:scale-115 text-[clamp(0.25rem,2.5vw,1.5rem)] transition }`}
-                        onMouseEnter={() => setHoveredIndex(3-index)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                    >
-                        {member}
-                    </h4>
-                    </div>
-                ))
-            }
-        
-            <h4 className="text-gray-300 inline-block text-right text-[clamp(0.25rem,2.5vw,1.5rem)]">MEMBER 05 •</h4><br/>
-            <h4 className="text-gray-300 inline-block text-right text-[clamp(0.25rem,2.5vw,1.5rem)]">MEMBER 06 •</h4><br/>
-            <h4 className="text-gray-300 inline-block text-right text-[clamp(0.25rem,2.5vw,1.5rem)]">MEMBER 07 •</h4><br/>
-        </div>
-            <div className="relative w-full max-w-lg aspect-[3/4] bg-linear-to-b from-slate-100 via-slate-400 to-slate-900 shadow-2xl rounded-xl">
-            {images.map((image, index) => (
-                <img key={image} src={image} className={`absolute transition ${hoveredIndex === index ? 'scale-110' : 'scale-105 brightness-85'} z-${4-index}`}/>
+                        <h4 
+                            key={member} 
+                            className={`inline-block text-gray-500 hover:text-black hover:scale-115 text-[clamp(0.25rem,2.0vw,2rem)] transition }`}
+                            onMouseEnter={() => handleMouseEnter(3-index)}
+                            onMouseLeave={() => setHoveredIndex(null)}
+                            >
+                            {member}
+                        </h4>
+                        </div>
+                    ))
+                }
             
-            ))}
+                <h4 className="text-gray-300 inline-block text-right text-[clamp(0.25rem,2.0vw,2rem)]">MEMBER 05 •</h4><br/>
+                <h4 className="text-gray-300 inline-block text-right text-[clamp(0.25rem,2.0vw,2rem)]">MEMBER 06 •</h4><br/>
+                <h4 className="text-gray-300 inline-block text-right text-[clamp(0.25rem,2.0vw,2rem)]">MEMBER 07 •</h4><br/>
+     
+            </div>
+                <div className="relative w-full max-w-lg aspect-[3/4] bg-linear-to-bl from-slate-100 via-slate-400 to-slate-900 shadow-2xl rounded-xl">
+                 <div className={`${font.className} absolute top-[0%] right-[0%] text-right   text-slate-700 
+                    ${hoveredIndex === null ? 'opacity-0' : 'opacity-40'} mr-1 transition ease-in-out`}>
+                        <div className={`text-[clamp(1.25rem,5.5vw,10rem)] leading-none font-bold `}>
+                            {currentMember}
+                        </div>
+                        <div className="text-[clamp(0.25rem,2.0vw,2rem)] ">
+                            {hoveredOccupation}
+                        </div>
+                    </div>
+                
+                {images.map((image, index) => (
+                    <img key={image} src={image} className={`absolute transition ${hoveredIndex === index ? 'scale-110 brightness-105' : 'scale-105 brightness-85'} z-${4-index}`}/>
+                    
+                ))}
+            </div>
         </div>
-        
     </div>
   )
 }
