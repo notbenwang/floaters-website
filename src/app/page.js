@@ -59,7 +59,7 @@ export default function Home() {
             </div> 
           </div> 
 
-          <div className="ml-auto">
+          <div className="w-3/4 mx-10 ml-auto">
           <Crew font={gothicFont} artFont={floatersFont}/>
           </div>
           <br/>
